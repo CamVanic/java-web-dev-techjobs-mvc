@@ -18,9 +18,11 @@
                 </th:block>
             </tr>
             <tr>
-                <!-- TODO #2: Complete the View Jobs By Category Table. -->
+                <!-- TODO #2: Complete the View Jobs By Category Table. (Create a form button called "View All" that links to jobdata.findall -->
 
-                <td></td> <!-- Feel free to remove or modify this element if necessary. -->
+                <td>
+                    <a th:href="@{/list/jobs?column=all&value=View%20All}">View All</a>
+                </td>
 
                 <td th:each="category : ${tableChoices}">
                     <ul>
