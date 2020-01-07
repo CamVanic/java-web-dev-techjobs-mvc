@@ -9,13 +9,21 @@
     <div class="container body-content">
 
         <h1 th:text="${#strings.capitalizeWords(title)}"></h1>
-        <table class="job-listings">
-            <tr>
-                <th:block th:each="job : ${jobs}">
-                    <th th:text="${job}"><li>
-                </th:block>
+
+        <table class="job-listing">
+            <tr th:each="job : ${jobs}">
+                <td>
+                    <p th:text="${'ID: ' + job.id}"></p>
+                    <p th:text="${job.name}"></p>
+                    <p th:text="${job.employer}"></p>
+                    <p th:text="${job.location}"></p>
+                    <p th:text="${job.positionType}"></p>
+                    <p th:text="${job.coreCompetency}"></p>
+                </td>
+
             </tr>
         </table>
+
 
     </div>
 
